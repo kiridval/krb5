@@ -124,6 +124,11 @@ const struct krb5_cksumtypes krb5int_cksumtypes_list[] = {
       &krb5int_enc_aes256, &krb5int_hash_sha384,
       krb5int_etm_checksum, NULL,
       48, 24, 0 },
+     { CKSUMTYPE_GOST,
+	   "gost", { 0 }, "gost",
+	 	NULL, &krb5int_hash_gost,
+	 	krb5int_unkeyed_checksum, NULL,
+	 	32, 32, CKSUM_UNKEYED },
 };
 
 const size_t krb5int_cksumtypes_length =
