@@ -464,6 +464,7 @@ extern const struct krb5_hash_provider krb5int_hash_md5;
 extern const struct krb5_hash_provider krb5int_hash_sha1;
 extern const struct krb5_hash_provider krb5int_hash_sha256;
 extern const struct krb5_hash_provider krb5int_hash_sha384;
+extern const struct krb5_hash_provider krb5int_hash_gost;
 
 /* Modules must implement the following functions. */
 
