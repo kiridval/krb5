@@ -191,6 +191,22 @@ const struct krb5_keytypes krb5int_enctypes_list[] = {
       krb5int_aes2_prf,
       CKSUMTYPE_HMAC_SHA384_192_AES256,
       0 /*flags*/, 256 },
+    {ENCTYPE_GOST,
+	 	  "gost_34_11",
+		  { "gost" },
+	 	  "Stribos hash",
+	 	   &krb5int_enc_des,
+		   &krb5int_hash_gost,
+	 	   16,
+	 	   krb5int_old_crypto_length,
+		   krb5int_old_encrypt,
+		   krb5int_old_decrypt,
+	 	   krb5int_des_string_to_key,
+		   k5_rand2key_des,
+	 	   krb5int_des_prf,
+	 	   CKSUMTYPE_GOST,
+	 	   ETYPE_WEAK
+	 	  },
 };
 
 const int krb5int_enctypes_length =
